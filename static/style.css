@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a; /* Fondo oscuro */
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal Centrado */
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(90deg, #c084fc, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: #94a3b8;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* --- ESTILOS DEL PODIO (Leaderboard) --- */
+.podium-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinea las barras abajo */
+    height: 350px;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.podium-place {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 140px;
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* Segundo Lugar */
+.place-2 {
+    height: 65%;
+    background: linear-gradient(to top, #334155, #475569);
+    order: 1; /* Izquierda visualmente */
+}
+.place-2 .rank-badge { background: #94a3b8; color: #0f172a; }
+
+/* Primer Lugar (Más grande) */
+.place-1 {
+    height: 100%; /* Altura completa */
+    background: linear-gradient(to top, #eab308, #facc15);
+    order: 2; /* Centro visualmente */
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.3);
+    width: 160px; /* Un poco más ancho */
+    transform: scale(1.05);
+}
+.place-1 .rank-badge { background: white; color: #ca8a04; font-size: 1.5rem; width: 50px; height: 50px; }
+.place-1 .team-name { color: #422006; font-weight: 800; font-size: 1.3rem; }
+.place-1 .score { color: #422006; }
+
+/* Tercer Lugar */
+.place-3 {
+    height: 50%;
+    background: linear-gradient(to top, #78350f, #92400e);
+    order: 3; /* Derecha visualmente */
+}
+.place-3 .rank-badge { background: #d97706; color: white; }
+
+/* Elementos dentro del podio */
+.rank-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.team-name { font-weight: 600; margin-bottom: 5px; font-size: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.score { font-family: monospace; background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 4px; }
+
+/* --- FORMULARIO DE SUBIDA (Vertical) --- */
+.upload-card {
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centrar tarjeta */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* FUERZA VERTICAL */
+    gap: 20px; /* Espacio entre elementos */
+    text-align: left;
+}
+
+label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: -10px; /* Pegar label al input */
+    font-weight: bold;
+}
+
+select, input[type="file"] {
+    padding: 15px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* --- BOTONES --- */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, filter 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* --- TABLAS --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #334155; }
+th { background: #0f172a; color: #c084fc; }
+tr:hover { background: #2d3748; }
+
+.alert { padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: bold;}
+.alert.success { background: #064e3b; color: #6ee7b7; border: 1px solid #10b981; }
+.alert.error { background: #7f1d1d; color: #fca5a5; border: 1px solid #ef4444; }

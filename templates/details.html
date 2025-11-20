@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking Global</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>📊 Clasificación Global</h1>
+        <h2>Todos los intentos</h2>
+        
+        {% if ranking %}
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Equipo</th>
+                    <th>Score</th>
+                    <th>Medalla</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in ranking %}
+                <tr>
+                    <td>{{ row.rank }}</td>
+                    <td style="font-weight:bold">{{ row.team_name }}</td>
+                    <td style="font-family:monospace; color: #fbbf24;">{{ "%.4f"|format(row.score) }}</td>
+                    <td>
+                        {% if row.rank == 1 %}🥇{% elif row.rank == 2 %}🥈{% elif row.rank == 3 %}🥉{% else %}💪{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No hay datos disponibles.</p>
+        {% endif %}
+
+        <div class="btn-group">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">⬅ Volver</a>
+        </div>
+    </div>
+
+</body>
+</html>
