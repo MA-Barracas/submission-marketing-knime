@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Intelligence Workshop</title>
+    
+    <!-- Carga de Reveal.js desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/white.min.css">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- PERSONALIZACIÓN CSS --- */
+        :root {
+            --main-red: #D80000;       /* Rojo Intenso */
+            --light-red: #FFE5E5;      /* Rojo Claro fondo */
+            --text-black: #222222;     /* Negro casi puro */
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--white);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--main-red);
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .reveal h1 { font-size: 2.5em; }
+        .reveal h2 { font-size: 1.8em; }
+        
+        .reveal p, .reveal li {
+            color: var(--text-black);
+            font-size: 32px; /* Fuente grande garantizada */
+            line-height: 1.4;
+        }
+
+        /* Elementos destacados */
+        .highlight {
+            color: var(--main-red);
+            font-weight: bold;
+        }
+
+        .box {
+            background-color: var(--light-red);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 10px solid var(--main-red);
+        }
+
+        /* Simulación de Nodos KNIME con CSS */
+        .knime-node {
+            display: inline-block;
+            background: #FFCC00; /* Amarillo KNIME clásico */
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-weight: bold;
+            border: 2px solid #333;
+            box-shadow: 4px 4px 0px #333;
+            margin: 0 10px;
+        }
+
+        .arrow {
+            font-size: 1.5em;
+            color: var(--main-red);
+            vertical-align: middle;
+        }
+
+        /* Ajustes de diapositivas */
+        .slide-number {
+            color: var(--main-red) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: PORTADA -->
+            <section>
+                <h2>Marketing + Data</h2>
+                <h3>De la intuición a la predicción</h3>
+                <p>Sesión Multidisciplinar - Noviembre 2025</p>
+                <div style="font-size: 1.5em; color: var(--main-red); margin-top: 30px;">
+                    <i class="fa-solid fa-chart-line"></i> 
+                    <i class="fa-solid fa-brain"></i>
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <img src="./img/UEV.png" style="width:50%">
+            </section>
+
+            <!-- SLIDE 2: EL OBJETIVO -->
+            <section>
+                <h2>El Santo Grial del Marketing</h2>
+                <p>Hay cosas que querríamos saber...</p>
+                <div class="box">
+                    <p class="fragment">¿Quién va a comprar mi producto?</p>
+                    <p class="fragment">¿Quién se va a ir a la competencia?</p>
+                    <p class="fragment">¿Cómo puedo anticiparme?</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: EL PROBLEMA -->
+            <section>
+                <h2>El "Pequeño" Obstáculo</h2>
+                <p>Para predecir el futuro necesitamos:<br> <strong>Estadística Avanzada</strong> + <strong>Programación 😭</strong></p>
+                <p class="fragment" style="font-size: 4em; color: #555;">
+                    <i class="fa-solid fa-square-root-variable"></i> + <i class="fa-solid fa-superscript"></i> = <i class="fa-solid fa-face-dizzy"></i>
+                </p>
+                <p class="fragment">Y aprender todo esto a nivel pro lleva años.</p>
+            </section>
+
+            <!-- SLIDE 4: LA REALIDAD -->
+            <section>
+                <h2>SO TODAY... WHAT?</h2>
+                <p>No tenemos 4 años de carrera de matemáticas.</p>
+                <p class="highlight" style="font-size: 1.5em;">Tenemos 2 horas.</p>
+                <p class="fragment">¿Misión imposible?</p>
+            </section>
+
+            <!-- SLIDE 5: LA SOLUCIÓN -->
+            <section data-background-color="#D80000">
+                <h1 style="color: white;">NO.</h1>
+                <h3 style="color: white;">Hay una herramienta para eso.</h3>
+                <p style="color: white;">(Y no requiere saber programar...)</p>
+                <p style="color: white;">😲</p>
+            </section>
+
+            <!-- SLIDE 6: KNIME INTRO -->
+            <section>
+                <h2>Conoced a <span style="color: #FFCC00; text-shadow: 2px 2px 0 #000;">KNIME</span></h2>
+                <p>Vuestra nueva mejor amiga.</p>
+                <ul>
+                    <li>Sin código (No-Code / Low-Code).</li>
+                    <li>Visual.</li>
+                    <li>Arrastrar y soltar.</li>
+                    <li>Potencia estadística real, interfaz intuitiva.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 7: CÓMO FUNCIONA -->
+            <section>
+                <h2>Programación Visual</h2>
+                <p>En lugar de escribir líneas de código oscuras...</p>
+                <p>Jugamos con <strong>"LEGOs"</strong> de datos.</p>
+                <div style="margin-top: 40px;">
+                    <i class="fa-solid fa-cubes" style="font-size: 3em; color: var(--main-red);"></i>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: EL CONCEPTO DE NODO -->
+            <section>
+                <h2>El "Nodo"</h2>
+                <p>Es la pieza básica. Hace una sola cosa, pero la hace bien.</p>
+                <br>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <div style="text-align:center"><i class="fa-solid fa-arrow-right"></i><br><small>Entrada</small></div>
+                    <div class="knime-node" style="padding: 30px;">PROCESO</div>
+                    <div style="text-align:center"><i class="fa-solid fa-arrow-right"></i><br><small>Salida</small></div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: EL FLUJO (WORKFLOW) -->
+            <section>
+                <h2>El Workflow</h2>
+                <p>Si conectas varios nodos, creas un pipeline de datos.</p>
+                <br>
+                <div style="font-size: 0.8em;">
+                    <span class="knime-node">Cargar CSV</span> 
+                    <span class="arrow">&rarr;</span> 
+                    <span class="knime-node">Limpiar</span> 
+                    <span class="arrow">&rarr;</span> 
+                    <span class="knime-node">Predecir</span>
+                </div>
+                <p style="margin-top: 30px; font-size: 0.8em;">"Leo los datos, los limpio y adivino el futuro".</p>
+            </section>
+
+            <!-- SLIDE 10: DEMO TIME INTRO -->
+            <section>
+                <h2>Demo en Vivo</h2>
+                <p>Menos charla, más acción.</p>
+                <p>Vamos a ver cómo se hace un modelo predictivo <strong>ahora mismo</strong>.</p>
+                <p><i class="fa-solid fa-laptop-code" style="color: var(--main-red);"></i></p>
+            </section>
+
+            <!-- SLIDE 11: PASO 1 LECTURA -->
+            <section>
+                <h3>Paso 1: Los Datos</h3>
+                <p>Usaremos el nodo <strong>CSV Reader</strong>.</p>
+                <p>Como en Excel, pero en plan cool. <br>(NOTA: No pregunteis al presentador lo que opina de excel.)</p>
+                <div class="box">
+                    <small>Tip: Configurar bien el delimitador (coma, punto y coma) es el 90% del éxito al cargar.</small>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: PASO 2 EXPLORACIÓN -->
+            <section>
+                <h3>Paso 2: ¿Qué tenemos aquí?</h3>
+                <p>Nodo <strong>Statistics</strong>.</p>
+                <p>Nos da la radiografía de los datos:</p>
+                <ul>
+                    <li>Medias, máximos y mínimos, desviaciones...</li>
+                    <li>Valores más frecuentes, modas, nans.</li>
+                    <li>Histogramas instantáneos.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 13: PASO 3 ENTRENAMIENTO -->
+            <section>
+                <h3>Paso 3: La Magia (Machine Learning)</h3>
+                <p>Podríamos usar un, por ejemplo, <strong>Decision Tree</strong> (Árbol de Decisión).</p>
+                <p>El ordenador <b>aprende</b> patrones: <br><em>"Si tiene > 30 años y saldo > 1000€... compra"</em>.</p>
+                <p class="fragment highlight">Aprende solo.</p>
+            </section>
+
+            <!-- SLIDE 14: LA MISIÓN DE HOY -->
+            <section data-background-color="#ffe5e5">
+                <h2 style="color: black;">Vuestra Misión</h2>
+                <p>Dataset: <strong>Bank Marketing (Portugal)</strong></p>
+                <p>Datos reales de llamadas telefónicas de un banco.</p>
+                <p><strong>Objetivo:</strong> <br>Predecir si el cliente contratará un depósito a plazo (variable 'y').</p>
+            </section>
+
+            <!-- SLIDE 15: EL RETO -->
+            <section>
+                <h2>El Reto</h2>
+                <ol>
+                    <li>Cargar los datos (url).</li>
+                    <li>Explorar y limpiar.</li>
+                    <li>¿Puede negocio aprotar insights?</li>
+                    <li>Entrenar un modelo o modelos en KNIME.</li>
+                    <li><strong>Generar predicciones.</strong></li>
+                </ol>
+            </section>
+
+            <!-- SLIDE 16: AYUDA EXPERTA -->
+            <section>
+                <p>🐼🐼🐼 ¡¡¡Que no panda el cúnico!!! 🐼🐼🐼</p>
+                <h2>No estáis solos</h2>
+                <p>Tenéis a vuestro lado a los <strong>Data Scientists</strong>.</p>
+                <p><i class="fa-solid fa-user-graduate"></i> + <i class="fa-solid fa-user-tie"></i> = ÉXITO</p>
+                <p style="font-size: 0.8em;">Ellos controlan la técnica, vosotros el negocio.</p>
+            </section>
+
+            <!-- SLIDE 17: LA COMPETICIÓN -->
+            <section>
+                <h2>The Competition</h2>
+                <p>Hemos montado una plataforma estilo "Kaggle".</p>
+                <p>Subiréis vuestro fichero de predicciones.</p>
+                <div class="box" style="text-align: center;">
+                    <i class="fa-solid fa-trophy" style="font-size: 2em; color: #DAA520;"></i><br>
+                    Evaluaremos el <strong>ACCURACY</strong> (Precisión).
+                </div>
+            </section>
+
+            <!-- SLIDE 18: DINÁMICA -->
+            <section>
+                <h2>Reglas del Juego</h2>
+                <ul>
+                    <li>Trabajo en equipos mixtos.</li>
+                    <li>Podéis probar tantos modelos como queráis.</li>
+                    <li>Solo cuenta la mejor subida a la plataforma.</li>
+                    <li>¡Creatividad al poder!</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 19: RECAP -->
+            <section>
+                <h2>Resumen</h2>
+                <ol>
+                    <li>Abrir KNIME.</li>
+                    <li>Crear Workflow.</li>
+                    <li>Predecir quién compra.</li>
+                    <li>Subir a la plataforma.</li>
+                    <li>Ganar la gloria eterna.</li>
+                </ol>
+            </section>
+
+            <!-- SLIDE 20: CIERRE -->
+            <section data-background-color="#D80000">
+                <h1 style="color: white;">¿Listos?</h1>
+                <p style="color: white;">Abrid vuestros portátiles.</p>
+                <p style="color: white; font-weight: bold;">https://github.com/JLGO-UEV/Taller-KNIME-Marketing</p>
+                <br>
+                <small style="color: white;">(Y haced caso a los de Ciencia de Datos, que saben cosas)</small>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts de Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            
+            // Configuración de tamaño para que sea amplio y claro (ratio apaisado)
+            width: 960,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 1.5
+        });
+    </script>
+</body>
+</html>
